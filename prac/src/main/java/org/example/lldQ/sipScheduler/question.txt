@@ -1,0 +1,25 @@
+Problem Statement
+Implement a Mutual fund SIP scheduler system in which users can create, edit, cancel SIP.
+
+For created SIPs order should get punched on the scheduled cycle date.
+
+Example: User created a SIP for XYZ mutual fund on 20th March and selected the period as MONTHLY (30 days), then 30 days after SIP created order should get punched every month.
+
+Assumptions:
+No need for user management, payment processing service.
+
+Requirements:
+User should be able to create a SIP with valid amount and can select required scheduling type (MONTHLY, WEEKLY, FORTNIGHT)
+User can edit created SIPs (Updating of amount or period type)
+Order for the amount deduction for all the SIPs created by the user should automatically get punched on the next cycle.
+Users can cancel created SIPs.
+
+
+Guidelines:
+Input can be read from a file or STDIN or coded in a driver method. [No Api and No UI]
+Output can be written to a file or STDOUT. [No Api]
+Store all interim/output data in-memory data structures. The usage of databases is not allowed.
+Restrict internet usage to looking up syntax.
+Language should be Java only.
+Save your code/project by your name and email it or upload on the google drive link provided. Your program will be executed on another machine. So, explicitly specify dependencies, if any, in your email.
+Duration for coding will be 60-90 minutes.

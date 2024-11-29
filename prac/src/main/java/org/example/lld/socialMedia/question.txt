@@ -1,0 +1,89 @@
+Problem Statement
+Build a console social media application for cleartrip that allows users to upload posts like pictures, blogs etc., interact with others’ posts, and follow other users on the platform.
+
+Functional Requirements
+User Registration: A new user should be able to register with an unique id and username.
+Upload a Post: A user should be able to upload a post of their choice (For simplicity, consider the post as a string value).
+Follow/Unfollow Users: A user should be able to follow or unfollow any number of other users.
+Show Feed for a User: A method to view posts uploaded by other users, sorted based on the following criteria(in order of priority):
+Posts from users that the current user follows will always appear at the top of the feed. Posts from non-followed users will come after.
+Among both groups of followed and unfollowed, the post should be sorted by posting time, with the more recent post appearing first
+
+Example Usage
+Register User:
+RegisterUser <user_id> <user_name>
+Input: RegisterUser 1 Akash // Register Akash
+Output: Akash Registered!!
+Input: RegisterUser 2 Hemant // Register Hemant
+Output: Hemant Registered!!
+
+Upload a Post:
+UploadPost <user_id> <post>
+Input: UploadPost 1 "This is my first post. My name is xyz" // User with id 1 uploads a post
+Output: Upload Successful with post id: 001
+Input: UploadPost 1 "I work at flipkart as a SDE1" // User with id 1 uploads another post
+Output: Upload Successful with post id: 002
+
+
+Follow/Unfollow a User :
+InteractWithUser <interaction_type> <user_id1> <user_id2>
+Input: InteractionWithUser FOLLOW 2 1 // User2 follows User1
+Output: Followed Akash!!
+Input: InteractionWithUser UNFOLLOW 2 1 // User2 unfollows User1
+Output: Unfollowed Akash!!
+
+Show feed for a User:
+	ShowFeed <user_id>
+Input: ShowFeed 1
+Output: UserName -
+ Post -
+ Post time -
+
+UserName - Akash
+# of Likes - 2
+# of Dislikes - 1
+Post - I work at flipkart as a SDE1
+Post time - 2024-10-18 10:11 PM
+
+UserName - Hemant
+# of Likes - 1
+# of Dislikes - 10
+Post - I too worked at flipkart as a SDE1
+Post time - 2024-10-18 10:101 PM
+.
+.
+
+
+Bonus Functionalities (Optional)
+Like/Dislike Post: A user should be able to like or unlike any number of posts.
+InteractWithPost <interaction_type> <user_id> <post_id>
+Input: LIKEDISLIKEPost LIKE 2 001 // User2 likes post with id 001
+Output: Post Liked!!
+Input: LIKEDISLIKEPost DISLIKE 2 001 // User 2 dislikes post with id 001
+Output: Post Disliked!!
+
+
+Display Relative Time: Show time in a relative format such as "2m ago" or "1 hr ago".
+Output: UserName -
+ Post -
+ Post time - 2m ago
+Guidelines
+Input can be read from a file or STDIN or coded in a driver method. [No Api and No UI]
+Output can be written to a file or STDOUT. [No Api]
+Store all interim/output data in-memory data structures. The usage of databases is not allowed.
+Limit internet usage to syntax lookup only.
+Language should be Java only.
+Save your code/project by your name and email it or upload on the google drive link provided. Your program will be executed on another machine. So, explicitly specify dependencies, if any, in your email.
+Duration for coding will be 60 minutes.
+
+Expectations
+Create the sample data yourself. You can put it into a file, write unit tests case or within the main driver program itself.
+Code should be demo-able (very important), either by using a main driver program or test cases. The code should be functionally correct and complete. At the end of this interview round, an interviewer will provide multiple inputs to your program for which it is expected to work.
+Bonus functionalities should be implemented once the core functionalities are complete.
+Avoid writing monolithic code.
+The Code should be readable, modular, testable, extensible with proper naming conventions. Use intuitive names for your variables, methods, and classes.
+The Code should handle edge cases properly and fail gracefully. Add suitable exception handling with proper messaging wherever required.
+It should be easy to add/remove functionality without rewriting the entire codebase i.e. extensible for new features.
+The code should follow object-oriented design principles.
+Don’t use any database, store all the data in memory.
+
